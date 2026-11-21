@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build-linux:
-    runs-on: [machine, runner=t4-xl]
+    runs-on: machine/gpu=l4/tenancy=spot
     strategy:
       max-parallel: 5
 

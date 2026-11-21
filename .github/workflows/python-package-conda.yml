@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build-linux:
-    runs-on: machine/gpu=l4/tenancy=spot
+    runs-on: [machine, runner=t4-xl, tenancy=spot]
     steps:
     - uses: actions/checkout@v4
     - name: Add conda to system path
